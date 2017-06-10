@@ -49,7 +49,7 @@
             // Republic of the Congo
 			["CG",1997,"President – Denis Sassou Nguesso, President of the Republic of the Congo (1997–present)"],
             // Democratic Republic of the Congo
-			["CD",2001,"President – Joseph Kabila, President of the Democratic Republic of the Congo (2001–present)"],
+			["DR Congo",2001,"President – Joseph Kabila, President of the Democratic Republic of the Congo (2001–present)"],
 			["Djibouti",1999,"President – Ismaïl Omar Guelleh, President of Djibouti (1999–present)"],
 			["Egypt",2014,"President – Abdel Fattah el-Sisi, President of Egypt (2014–present)"],
 			["Equatorial Guinea",1979,"President – Teodoro Obiang Nguema Mbasogo, President of Equatorial Guinea (1979–present)"],
@@ -134,7 +134,7 @@
 			["Saudi Arabia",2015,"Monarch – Salman, King of Saudi Arabia (2015–present)"],
 			["Singapore",2011,"President – Tony Tan, President of Singapore (2011–present)"],
 			["Sri Lanka",2015,"President – Maithripala Sirisena, President of Sri Lanka (2015–present)"],
-			["Syrian Arab Republic",2000,"President – Bashar al-Assad, President of Syria (2000–present)"],
+			["Syria",2000,"President – Bashar al-Assad, President of Syria (2000–present)"],
             // Taiwan
 			["Republic of China",2016,"President – Tsai Ing-wen, President of Taiwan (2016–present)"],
 			["Tajikistan",1992,"President – Emomali Rahmon, President of Tajikistan (1992–present)"],
@@ -155,6 +155,7 @@
 			["Belarus",1994,"President – Alexander Lukashenko, President of Belarus (1994–present)"],
 			["Belgium",2013,"Monarch – Philippe, King of the Belgians (2013–present)"],
 			//["Belgium",2014,"Prime Minister – Charles Michel, Prime Minister of Belgium (2014–present)"],
+			["Bosnia and Herzegovina",2014,""],
 //			["Bosnia and Herzegovina",2014,"Croat Member – Dragan Čović (2014–present)"],
 //			["Bosnia and Herzegovina",2010,"Bosniak Member – Bakir Izetbegović (2010–present)"],
 //			["Bosnia and Herzegovina",null,"Serb Member – Mladen Ivanić (2014–present; Chairman of the Presidency of Bosnia and Herzegovina, 2016–present)"],
@@ -192,7 +193,7 @@
 			["Lithuania",2009,"President – Dalia Grybauskaitė, President of Lithuania (2009–present)"],
 			//["Luxembourg",2000,"Monarch – Henri, Grand Duke of Luxembourg (2000–present)"],
 			["Luxembourg",2013,"Prime Minister – Xavier Bettel, Prime Minister of Luxembourg (2013–present)"],
-			//["Macedonia",2009,"President – Gjorge Ivanov, President of Macedonia (2009–present)"],
+			["Macedonia",2009,"President – Gjorge Ivanov, President of Macedonia (2009–present)"],
 			//["Macedonia",2017,"Zoran Zaev, President of the Government of Macedonia (2017–present)"],
 			["Malta",2014,"President – Marie Louise Coleiro Preca, President of Malta (2014–present)"],
 			["Moldova",2016,"President – Igor Dodon, President of Moldova (2016–present)"],
@@ -369,7 +370,7 @@
 		];
 
 
-        google.charts.load('current', {'packages':['geochart'],'language': 'ru'});
+        google.charts.load('current', {'packages':['geochart'],'language': 'ru', mapsApiKey: 'AIzaSyCKtcxEpffjbsHF9pjLKALFWc4oN7E3BuQ'});
         google.charts.setOnLoadCallback(drawRegionsMap);
 
 		function drawRegionsMap() {
@@ -386,9 +387,10 @@
 			var options = {
 				colorAxis: {
 					minValue: 4,
-					colors: ['#bbffcc', '#bbccaa', '#cc8888', '#ee8888','#ff4444'],
-					maxValue: 40
-				}
+					colors: ['#aea', '#bcb', '#777', '#555','#444'],
+					maxValue: 30
+				},
+				//displayMode: 'text'
 			};
 
 			var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
